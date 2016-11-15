@@ -1,0 +1,200 @@
+Name - Prabal Basu
+A# - A02049867
+
+Source files - pla.h, pla.cpp, main.cpp
+Makefile - makefile
+Executable - runProg
+Training files - Data.txt, and.txt, or.txt, nand.txt, nor.txt, xor.txt
+Error vs. Epoch Graphs - Inside directory 'error_vs_epoch_graphs'
+How to compile - make
+How to run - ./runProg
+
+Typical Output for Data.txt
+---------------------------------------------------------------------------
+:$./runProg 
+Enter the training file name: Data.txt
+Do you want to skip the 10-fold cross-validation [Y/N]: N
+Performing 10-fold cross-validation ...
+Following result is for 10 splits ...
+Test Run   |   Accuracy on Test Set (%)
+1          |   100
+2          |   100
+3          |   100
+4          |   100
+5          |   100
+6          |   100
+7          |   100
+8          |   100
+9          |   100
+10         |   100
+
+Average accuracy(%): 100
+
+Time(s) : 10-fold Cross-Validation : Wall Time : 0.0624659, CPU Time : 0.062193
+
+Do you want to skip training the perceptron using all training instances and manually check its accuracy [Y/N]: N
+Training the Perceptron using all the instances ...
+Enter test input 1: 5.5723
+Enter test input 2: 4.8494
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: -0.273
+Enter test input 2: -1.5614
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: N
+That's all folks!
+
+---------------------------------------------------------------------------
+
+Typical Output for and.txt
+---------------------------------------------------------------------------
+./runProg 
+Enter the training file name: and.txt
+Do you want to skip the 10-fold cross-validation [Y/N]: Y
+Do you want to skip training the perceptron using all training instances and manually check its accuracy [Y/N]: N
+Training the Perceptron using all the instances ...
+Enter test input 1: 0
+Enter test input 2: 0
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 0
+Enter test input 2: 1
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 0
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 1
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: N
+That's all folks!
+---------------------------------------------------------------------------
+
+Typical Output for or.txt
+---------------------------------------------------------------------------
+./runProg 
+Enter the training file name: or.txt
+Do you want to skip the 10-fold cross-validation [Y/N]: Y
+Do you want to skip training the perceptron using all training instances and manually check its accuracy [Y/N]: N
+Training the Perceptron using all the instances ...
+Enter test input 1: 0
+Enter test input 2: 0
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 0
+Enter test input 2: 1
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 0
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 1
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: N
+That's all folks!
+---------------------------------------------------------------------------
+
+Typical Output for nand.txt
+---------------------------------------------------------------------------
+./runProg 
+Enter the training file name: nand.txt
+Do you want to skip the 10-fold cross-validation [Y/N]: Y
+Do you want to skip training the perceptron using all training instances and manually check its accuracy [Y/N]: N
+Training the Perceptron using all the instances ...
+Enter test input 1: 0
+Enter test input 2: 0
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 0
+Enter test input 2: 1
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 0
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 1
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: N
+That's all folks!
+---------------------------------------------------------------------------
+
+Typical Output for nor.txt
+---------------------------------------------------------------------------
+./runProg 
+Enter the training file name: nor.txt
+Do you want to skip the 10-fold cross-validation [Y/N]: Y
+Do you want to skip training the perceptron using all training instances and manually check its accuracy [Y/N]: N
+Training the Perceptron using all the instances ...
+Enter test input 1: 0
+Enter test input 2: 0
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 0
+Enter test input 2: 1
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 0
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 1
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: N
+That's all folks!
+---------------------------------------------------------------------------
+
+Typical Output for xor.txt
+---------------------------------------------------------------------------
+./runProg 
+Enter the training file name: xor.txt
+Do you want to skip the 10-fold cross-validation [Y/N]: N
+Cannot perform 10-fold cross-validation, as the number of training instances is less than 10 ...
+Do you want to skip training the perceptron using all training instances and manually check its accuracy [Y/N]: N
+Training the Perceptron using all the instances ...
+Enter test input 1: 0
+Enter test input 2: 0
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 0
+Enter test input 2: 1
+Predicted Output: 1
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 0
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: Y
+Enter test input 1: 1
+Enter test input 2: 1
+Predicted Output: 0
+Do you want to perform more manual testing [Y/N]: N
+That's all folks!
+
+---------------------------------------------------------------------------
+
+Residual Average Error generated by various boolean logic gates
+---------------------------------------------------------------
+GATE           RESIDUAL AVERAGE ERROR
+-------------------------------------
+AND            0.077
+OR             0.049
+NAND           0.076
+NOR            0.055
+XOR            0.250
+-------------------------------------
+
+Explanation of high residual error for XOR gate
+-----------------------------------------------
+XOR gate cannot be trained using a perceptron as it is a non-linear separable function. 
+That is, it is not possible to find a straight-line that separates the data space, to a 
+region with output '0', and another region with output '1'. The average residual 
+error of 0.25 can be attributed to the fact that, if a straight-line is used to bisect 
+the XOR data space into two regions (with outputs 0 and 1), there will be at least one 
+data with an incorrect position. As the total number of data in a 2-input XOR data space 
+is 4, the minimum residual error has got be no less than 1/4 = 0.25.
